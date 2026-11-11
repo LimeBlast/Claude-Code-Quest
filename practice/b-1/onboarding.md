@@ -7,5 +7,5 @@ Notes from a teammate for whoever joins next.
 - Links with a scheme, such as `https:` and `mailto:`, are skipped, so a run makes no network requests.
 - Links inside fenced code blocks and inline code are ignored.
 - A `linkcheck.json` in the folder you check can set `files` and `ignore`. Both are optional.
-- linkcheck always exits with code 0, even when it finds broken links, so it can't fail a CI job on its own.
+- linkcheck exits with code 0 when every link resolves, 1 when it finds broken links, and 2 when `linkcheck.json` is invalid, so it can fail a CI job on its own.
 - Run the tests with `npm test`.
